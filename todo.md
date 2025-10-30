@@ -37,3 +37,4 @@
 - [x] Redesign website to match Gamma presentation structure
 - [x] Add three opening stories without Paul Revere theme
 - [x] Align content and flow with presentation deck
+- [x] Convert website to dark theme with navy background
