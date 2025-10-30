@@ -23,3 +23,6 @@
 - [x] Remove dramatic call-to-arms language throughout
 - [x] Update features section with measured business language
 - [x] Revise CTA sections to be more professional
+- [x] Update messaging from enterprise-focused to consumer-friendly (for everyone)
+- [x] Remove enterprise-specific language throughout the site
+- [x] Revise value propositions to appeal to all users

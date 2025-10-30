@@ -26,22 +26,22 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-primary px-4 py-2 rounded-full mb-6">
             <Zap className="w-4 h-4" />
-            <span className="text-sm font-medium">Enterprise Bluetooth Security Platform</span>
+            <span className="text-sm font-medium">Bluetooth Security for Everyone</span>
           </div>
           <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
             BlueGuard<br />
-            <span className="text-primary">Bluetooth Security Infrastructure</span>
+            <span className="text-primary">Protect Your Wireless Devices</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            A comprehensive security platform for Bluetooth-enabled enterprise environments. 
-            Real-time threat detection and automated response for modern wireless networks.
+            Comprehensive security for all your Bluetooth-enabled devices. 
+            Real-time threat detection and protection for smartphones, laptops, smart homes, and more.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" className="text-lg px-8">
-              Schedule Demo
+              Get Started
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8">
-              Technical Overview
+              Learn More
             </Button>
           </div>
         </div>
@@ -51,9 +51,9 @@ export default function Home() {
       <section id="solution" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">The BlueGuard Solution</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Why BlueGuard?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Addressing critical security gaps in Bluetooth-enabled enterprise infrastructure
+              Complete protection for your Bluetooth devices against modern security threats
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -62,9 +62,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Continuous Monitoring</h3>
+                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Always-On Protection</h3>
                 <p className="text-muted-foreground">
-                  Real-time analysis of Bluetooth traffic patterns to identify potential security threats and unauthorized device connections.
+                  Continuous monitoring of your Bluetooth connections to detect and block suspicious activity before it affects your devices.
                 </p>
               </CardContent>
             </Card>
@@ -74,9 +74,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Radio className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Access Control</h3>
+                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Smart Device Control</h3>
                 <p className="text-muted-foreground">
-                  Policy-based device authentication and authorization framework for managing Bluetooth connectivity across the enterprise.
+                  Easily manage which devices can connect to your phone, computer, or smart home with simple approval controls.
                 </p>
               </CardContent>
             </Card>
@@ -86,9 +86,9 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <Lock className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Data Protection</h3>
+                <h3 className="text-xl font-semibold mb-2 text-card-foreground">Privacy First</h3>
                 <p className="text-muted-foreground">
-                  End-to-end encryption management for Bluetooth communications with centralized key lifecycle administration.
+                  Military-grade encryption keeps your data safe during Bluetooth transfers, from file sharing to audio streaming.
                 </p>
               </CardContent>
             </Card>
@@ -101,31 +101,31 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-foreground mb-6">Technical Architecture</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-6">How It Works</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                BlueGuard employs advanced signal processing and behavioral analysis to monitor Bluetooth Low Energy (BLE) 
-                and Classic Bluetooth protocols across enterprise networks.
+                BlueGuard uses advanced AI to monitor your Bluetooth connections in real-time, 
+                learning what's normal for you and alerting you to anything suspicious.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Behavioral Analysis Engine</h4>
-                    <p className="text-muted-foreground">Pattern recognition algorithms identify anomalous device behavior and connection attempts</p>
+                    <h4 className="font-semibold text-foreground">Intelligent Threat Detection</h4>
+                    <p className="text-muted-foreground">Automatically identifies and blocks unauthorized connection attempts</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Policy Enforcement Framework</h4>
-                    <p className="text-muted-foreground">Centralized management of device access policies and security configurations</p>
+                    <h4 className="font-semibold text-foreground">Simple Setup</h4>
+                    <p className="text-muted-foreground">Install once and forget it—works silently in the background</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-foreground">Cloud-Based Infrastructure</h4>
-                    <p className="text-muted-foreground">Scalable deployment model with distributed threat intelligence sharing</p>
+                    <h4 className="font-semibold text-foreground">Works Everywhere</h4>
+                    <p className="text-muted-foreground">Protects all your devices—phones, tablets, computers, and smart home gadgets</p>
                   </div>
                 </li>
               </ul>
@@ -137,7 +137,7 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-3xl font-bold text-primary">99.9%</div>
-                  <div className="text-sm text-muted-foreground">Detection Rate</div>
+                  <div className="text-sm text-muted-foreground">Threat Detection</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">&lt;10ms</div>
@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-muted-foreground">Monitoring</div>
+                  <div className="text-sm text-muted-foreground">Protection</div>
                 </div>
               </div>
             </div>
@@ -157,9 +157,9 @@ export default function Home() {
       <section id="market" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Market Opportunity</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">The Bluetooth Security Problem</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Growing demand for wireless security infrastructure in enterprise environments
+              Billions of devices rely on Bluetooth every day, but most lack proper security
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -174,14 +174,14 @@ export default function Home() {
               <CardContent className="pt-6 text-center">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">5.6B</div>
-                <p className="text-muted-foreground">Bluetooth devices shipped annually worldwide</p>
+                <p className="text-muted-foreground">Bluetooth devices shipped worldwide each year</p>
               </CardContent>
             </Card>
             <Card className="bg-gradient-to-br from-blue-50 to-white border-blue-100">
               <CardContent className="pt-6 text-center">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">67%</div>
-                <p className="text-muted-foreground">Enterprises without dedicated Bluetooth security</p>
+                <p className="text-muted-foreground">Users without dedicated Bluetooth security</p>
               </CardContent>
             </Card>
           </div>
@@ -191,17 +191,17 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="py-20 px-6 bg-gradient-to-br from-primary to-blue-700 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Learn More About BlueGuard</h2>
+          <h2 className="text-4xl font-bold mb-6">Secure Your Devices Today</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Discover how BlueGuard can enhance your enterprise wireless security infrastructure. 
-            Contact us to schedule a technical demonstration.
+            Join thousands of users protecting their Bluetooth devices with BlueGuard. 
+            Get started in minutes with our simple setup.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
-              Request Information
+              Download Now
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent text-white border-white hover:bg-white/10">
-              Technical Documentation
+              View Pricing
             </Button>
           </div>
         </div>
