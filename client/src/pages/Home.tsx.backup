@@ -89,6 +89,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Live Threat Visualization Section */}
+      <section className="py-20 px-6 bg-card/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Real-Time Threat Protection</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See how BlueGuard detects and blocks Bluetooth threats in real-time
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <ThreatGraph />
+          </div>
+        </div>
+      </section>
+
       {/* Three Opening Stories Section */}
       <section id="threat" className="py-20 px-6">
         <div className="container mx-auto">
@@ -165,23 +180,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Live Threat Visualization Section */}
-      <section className="py-20 px-6 bg-card/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Real-Time Threat Protection</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              See how BlueGuard detects and blocks Bluetooth threats in real-time
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <ThreatGraph />
-          </div>
-        </div>
-      </section>
-
-
 
       {/* How It Works Section */}
       <section id="how-it-works" className="py-20 px-6 bg-card/30">

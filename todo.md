@@ -47,3 +47,7 @@
 - [x] Add detailed market analysis with growth projections ($1.44B → $4.32B)
 - [x] Align website content with actual Gamma presentation
 - [x] Enhance threat graph with interactive hover elements and tooltips
+- [ ] Set up website performance and user engagement monitoring system
+- [ ] Add analytics tracking for visitor metrics
+- [ ] Implement performance monitoring dashboard
+- [x] Move three opening stories above live threat monitor on main page
