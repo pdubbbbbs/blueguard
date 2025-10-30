@@ -4,9 +4,9 @@ import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, L
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-blue-100 z-50">
+      <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Shield className="w-8 h-8 text-primary" />
@@ -24,7 +24,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-primary px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 border border-primary/20">
             <Zap className="w-4 h-4" />
             <span className="text-sm font-medium">Hardware-Level Bluetooth Security</span>
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Three Opening Stories Section */}
-      <section id="threat" className="py-20 px-6 bg-white">
+      <section id="threat" className="py-20 px-6 bg-card/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">The Critical Security Gap</h2>
@@ -59,17 +59,17 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Story 1: The Threat is Real */}
-            <Card className="border-2 border-red-100 hover:border-red-300 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-white to-red-50">
+            <Card className="border-2 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                  <AlertTriangle className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-red-500/20">
+                  <AlertTriangle className="w-8 h-8 text-red-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">The Threat is Real</h3>
                 <p className="text-muted-foreground mb-6 text-center">
                   A critical security gap affects every device currently on the market. This universal vulnerability 
                   impacts all hardware regardless of existing security measures.
                 </p>
-                <div className="bg-white/80 p-4 rounded-lg border border-red-200">
+                <div className="bg-background/50 p-4 rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground italic">
                     "Exploits against unpatched vulnerabilities account for nearly half of all security incidents, 
                     demonstrating the critical need for robust, foundational hardware-level protection."
@@ -80,17 +80,17 @@ export default function Home() {
             </Card>
 
             {/* Story 2: The Window is Closing */}
-            <Card className="border-2 border-orange-100 hover:border-orange-300 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-white to-orange-50">
+            <Card className="border-2 border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                  <Clock className="w-8 h-8 text-orange-600" />
+                <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-orange-500/20">
+                  <Clock className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">The Window is Closing</h3>
                 <p className="text-muted-foreground mb-6 text-center">
                   2024-2025 represents a critical timeframe for deployment before widespread exploitation 
                   of this vulnerability becomes the norm across all devices.
                 </p>
-                <div className="bg-white/80 p-4 rounded-lg border border-orange-200">
+                <div className="bg-background/50 p-4 rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground italic">
                     "Firmware vulnerabilities are a persistent and growing threat, often exploited in the 
                     earliest stages of an attack, underlining the urgency for pre-boot protection."
@@ -101,9 +101,9 @@ export default function Home() {
             </Card>
 
             {/* Story 3: BlueGuard is the Solution */}
-            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-white to-blue-50">
+            <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
                   <ShieldCheck className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">BlueGuard is the Solution</h3>
@@ -111,7 +111,7 @@ export default function Home() {
                   Our hardware-level protection addresses first-boot attacks, specifically targeting this 
                   universal exploit across all devices with no exceptions.
                 </p>
-                <div className="bg-white/80 p-4 rounded-lg border border-blue-200">
+                <div className="bg-background/50 p-4 rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground italic">
                     "The weakest link is often the first one. If you can compromise a device at boot, you own it completely, 
                     regardless of subsequent software security measures."
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+      <section id="solution" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Why BlueGuard?</h2>
@@ -134,9 +134,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg bg-card">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 border border-primary/20">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground">First-Boot Protection</h3>
@@ -146,9 +146,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg bg-card">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 border border-primary/20">
                   <Radio className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground">Universal Coverage</h3>
@@ -158,9 +158,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg bg-card">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 border border-primary/20">
                   <Lock className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground">Patent-Protected</h3>
@@ -174,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* Device-Specific Protection Section */}
-      <section id="devices" className="py-20 px-6 bg-white">
+      <section id="devices" className="py-20 px-6 bg-card/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Protection for Every Device</h2>
@@ -185,9 +185,9 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Smartphones */}
-            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
                   <Smartphone className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smartphones</h3>
@@ -213,9 +213,9 @@ export default function Home() {
             </Card>
 
             {/* Laptops */}
-            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
                   <Laptop className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Laptops & Computers</h3>
@@ -241,9 +241,9 @@ export default function Home() {
             </Card>
 
             {/* Smart Home */}
-            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl bg-white">
+            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
                   <HomeIcon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smart Home & IoT</h3>
@@ -272,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* Market Opportunity Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Market Opportunity</h2>
@@ -281,21 +281,21 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">$351B</div>
                 <p className="text-muted-foreground">Global cybersecurity market by 2030</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">5.6B</div>
                 <p className="text-muted-foreground">Bluetooth devices shipped annually worldwide</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
+            <Card className="bg-card border-border hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">75%</div>
@@ -307,18 +307,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-6 bg-gradient-to-br from-primary to-blue-700 text-white">
+      <section id="contact" className="py-20 px-6 bg-primary/10 border-y border-primary/20">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Secure the Future</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6 text-foreground">Secure the Future</h2>
+          <p className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto">
             Learn how BlueGuard addresses the most critical vulnerability in modern Bluetooth devices 
             with hardware-level protection from day one.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8">
               Contact Us
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent text-white border-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="text-lg px-8">
               Download Deck
             </Button>
           </div>
@@ -326,7 +326,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 bg-white border-t border-blue-100">
+      <footer className="py-8 px-6 border-t border-border">
         <div className="container mx-auto text-center text-muted-foreground">
           <p>&copy; 2025 BlueGuard. All rights reserved.</p>
         </div>
