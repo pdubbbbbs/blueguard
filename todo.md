@@ -46,3 +46,4 @@
 - [x] Add competitive landscape section (Intel, TI, High Sec Labs patents)
 - [x] Add detailed market analysis with growth projections ($1.44B → $4.32B)
 - [x] Align website content with actual Gamma presentation
+- [x] Enhance threat graph with interactive hover elements and tooltips
