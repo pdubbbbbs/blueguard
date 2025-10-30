@@ -26,3 +26,4 @@
 - [x] Update messaging from enterprise-focused to consumer-friendly (for everyone)
 - [x] Remove enterprise-specific language throughout the site
 - [x] Revise value propositions to appeal to all users
+- [x] Add device-specific protection section (smartphones, laptops, smart home)

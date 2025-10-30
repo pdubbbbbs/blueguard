@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle } from "lucide-react";
+import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
           </div>
           <div className="flex gap-6">
             <a href="#solution" className="text-foreground hover:text-primary transition-colors">Solution</a>
+            <a href="#devices" className="text-foreground hover:text-primary transition-colors">Devices</a>
             <a href="#technology" className="text-foreground hover:text-primary transition-colors">Technology</a>
             <a href="#market" className="text-foreground hover:text-primary transition-colors">Market</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
@@ -96,8 +97,106 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Device-Specific Protection Section */}
+      <section id="devices" className="py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Protection for Every Device</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              BlueGuard adapts to protect all your Bluetooth-enabled devices with tailored security
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Smartphones */}
+            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                  <Smartphone className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smartphones</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Protect against unauthorized pairing attempts</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Secure wireless earbuds and headphone connections</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Monitor file transfers and prevent data leaks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Block tracking via Bluetooth beacons</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Laptops */}
+            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                  <Laptop className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Laptops & Computers</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Secure keyboard and mouse connections</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Prevent BlueBorne and BleedingBit exploits</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Protect file sharing and tethering</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Alert on suspicious nearby devices</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Smart Home */}
+            <Card className="border-2 border-blue-100 hover:border-primary transition-all duration-300 hover:shadow-xl">
+              <CardContent className="pt-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                  <HomeIcon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smart Home Devices</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Secure smart speakers and displays</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Protect smart locks and security systems</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Monitor IoT device communications</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Prevent unauthorized smart home access</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Section */}
-      <section id="technology" className="py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+      <section id="technology" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -154,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* Market Section */}
-      <section id="market" className="py-20 px-6 bg-white">
+      <section id="market" className="py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">The Bluetooth Security Problem</h2>
@@ -163,21 +262,21 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-blue-50 to-white border-blue-100">
+            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">$8.2B</div>
                 <p className="text-muted-foreground">Projected Bluetooth security market by 2028</p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-blue-50 to-white border-blue-100">
+            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">5.6B</div>
                 <p className="text-muted-foreground">Bluetooth devices shipped worldwide each year</p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-blue-50 to-white border-blue-100">
+            <Card className="bg-white border-blue-100 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6 text-center">
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <div className="text-4xl font-bold text-primary mb-2">67%</div>
