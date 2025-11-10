@@ -29,8 +29,9 @@ export default function Home() {
             <span className="text-sm font-medium">Hardware-Level Bluetooth Security</span>
           </div>
           <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
-            BlueGuard<br />
-            <span className="text-primary">Protecting Every Device From Day One</span>
+            <span className="text-primary">One Vulnerability.<br />
+            Billions of Devices.<br />
+            One Solution.</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             The first hardware-level security solution addressing a universal vulnerability 
@@ -43,83 +44,6 @@ export default function Home() {
             <Button size="lg" variant="outline" className="text-lg px-8">
               Contact Us
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Three Opening Stories Section */}
-      <section id="threat" className="py-20 px-6 bg-card/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">The Critical Security Gap</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Understanding the universal vulnerability and the urgent need for protection
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Story 1: The Threat is Real */}
-            <Card className="border-2 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-red-500/20">
-                  <AlertTriangle className="w-8 h-8 text-red-500" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">The Threat is Real</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  A critical security gap affects every device currently on the market. This universal vulnerability 
-                  impacts all hardware regardless of existing security measures.
-                </p>
-                <div className="bg-background/50 p-4 rounded-lg border border-border">
-                  <p className="text-sm text-muted-foreground italic">
-                    "Exploits against unpatched vulnerabilities account for nearly half of all security incidents, 
-                    demonstrating the critical need for robust, foundational hardware-level protection."
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2 font-semibold">— IBM Security X-Force, 2023</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Story 2: The Window is Closing */}
-            <Card className="border-2 border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-orange-500/20">
-                  <Clock className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">The Window is Closing</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  2024-2025 represents a critical timeframe for deployment before widespread exploitation 
-                  of this vulnerability becomes the norm across all devices.
-                </p>
-                <div className="bg-background/50 p-4 rounded-lg border border-border">
-                  <p className="text-sm text-muted-foreground italic">
-                    "Firmware vulnerabilities are a persistent and growing threat, often exploited in the 
-                    earliest stages of an attack, underlining the urgency for pre-boot protection."
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2 font-semibold">— NIST</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Story 3: BlueGuard is the Solution */}
-            <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
-                  <ShieldCheck className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">BlueGuard is the Solution</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  Our hardware-level protection addresses first-boot attacks, specifically targeting this 
-                  universal exploit across all devices with no exceptions.
-                </p>
-                <div className="bg-background/50 p-4 rounded-lg border border-border">
-                  <p className="text-sm text-muted-foreground italic">
-                    "The weakest link is often the first one. If you can compromise a device at boot, you own it completely, 
-                    regardless of subsequent software security measures."
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2 font-semibold">— Bruce Schneier, Security Expert</p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -167,104 +91,6 @@ export default function Home() {
                 <p className="text-muted-foreground">
                   Proprietary technology with strong patent protection creating defensible competitive barriers.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Device-Specific Protection Section */}
-      <section id="devices" className="py-20 px-6 bg-card/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Protection for Every Device</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              BlueGuard secures all Bluetooth-enabled hardware from the moment they power on
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Smartphones */}
-            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
-                  <Smartphone className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smartphones</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Boot-level protection before OS loads</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Secure Bluetooth pairing from first power-on</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Protection against firmware-level exploits</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Hardware-enforced connection policies</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Laptops */}
-            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
-                  <Laptop className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Laptops & Computers</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Pre-boot security initialization</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">BlueBorne and BleedingBit exploit prevention</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Secure peripheral authentication</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Hardware-level threat detection</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Smart Home */}
-            <Card className="border-2 border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl bg-card">
-              <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border border-primary/20">
-                  <HomeIcon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-card-foreground">Smart Home & IoT</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Factory-level security integration</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Protect smart locks and security systems</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">IoT device boot-time verification</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Prevent unauthorized device takeover</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
           </div>
