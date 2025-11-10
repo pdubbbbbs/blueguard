@@ -10,7 +10,17 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Shield className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">BlueGuard</span>
+            <span
+              className="text-2xl font-bold"
+              style={{
+                color: 'white',
+                textShadow: '0 0 10px rgba(59,130,246,0.8), 0 0 20px rgba(59,130,246,0.6), 0 0 30px rgba(59,130,246,0.4), 0 0 40px rgba(59,130,246,0.3), -2px -2px 0 rgba(59,130,246,0.5), 2px -2px 0 rgba(59,130,246,0.5), -2px 2px 0 rgba(59,130,246,0.5), 2px 2px 0 rgba(59,130,246,0.5), 0 4px 15px rgba(0,0,0,0.3)',
+                WebkitTextStroke: '1px rgba(59,130,246,0.6)',
+                filter: 'drop-shadow(0 0 15px rgba(59,130,246,0.7))'
+              }}
+            >
+              BlueGuard
+            </span>
           </div>
           <div className="flex gap-6">
             <a href="#threat" className="text-foreground hover:text-primary transition-colors">The Threat</a>
