@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ThreatGraph from "@/components/ThreatGraph";
 import RealWorldStories from "@/components/RealWorldStories";
-import BluetoothDefenseAnimation from "@/components/BluetoothDefenseAnimation";
 import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X } from "lucide-react";
 
 export default function Home() {
@@ -111,7 +110,7 @@ export default function Home() {
             <Award className="w-5 h-5 text-primary" />
             <span className="text-sm text-muted-foreground">Three U.S. Provisional Patents Pending</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
             <Button size="lg" className="text-lg px-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
               Learn More
               <span className="ml-2">→</span>
@@ -119,11 +118,6 @@ export default function Home() {
             <Button size="lg" variant="outline" className="text-lg px-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
               Contact Us
             </Button>
-          </div>
-
-          {/* Bluetooth Defense Animation */}
-          <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500">
-            <BluetoothDefenseAnimation />
           </div>
         </div>
       </section>
