@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import ThreatGraph from "@/components/ThreatGraph";
 import RealWorldStories from "@/components/RealWorldStories";
 import BluetoothDefenseAnimation from "@/components/BluetoothDefenseAnimation";
-import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, AlertTriangle, Clock, ShieldCheck, Usb, Cpu, Activity, BarChart3, Award, Mail, Linkedin, Phone, Menu, X } from "lucide-react";
+import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -124,43 +124,6 @@ export default function Home() {
           {/* Bluetooth Defense Animation */}
           <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500">
             <BluetoothDefenseAnimation />
-          </div>
-        </div>
-      </section>
-
-      {/* Threat Statistics Bar */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-red-500/10 border-y border-red-500/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(239,68,68,0.1)_50%,transparent_100%)] animate-pulse"></div>
-        <div className="container mx-auto relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
-            <div className="group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-5 h-5 text-red-500 group-hover:animate-pulse" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-red-500">5.6B</div>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground">Vulnerable devices shipped annually</p>
-            </div>
-            <div className="group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <AlertTriangle className="w-5 h-5 text-orange-500 group-hover:animate-pulse" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-orange-500">100%</div>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground">Current devices lack first-boot protection</p>
-            </div>
-            <div className="group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <BarChart3 className="w-5 h-5 text-yellow-500 group-hover:animate-pulse" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-yellow-500">47%</div>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground">Security incidents from unpatched vulnerabilities</p>
-            </div>
-            <div className="group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Clock className="w-5 h-5 text-primary group-hover:animate-pulse" />
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary">2024-25</div>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground">Critical deployment window</p>
-            </div>
           </div>
         </div>
       </section>
