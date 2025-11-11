@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import ThreatGraph from "@/components/ThreatGraph";
 import RealWorldStories from "@/components/RealWorldStories";
-import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X } from "lucide-react";
+import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X, AlertTriangle } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,19 +10,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-card/90 backdrop-blur-xl border-b border-border z-50 shadow-lg">
+      <nav className="fixed top-0 w-full bg-card/95 backdrop-blur-xl border-b border-border/50 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2 group">
             <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-            <span
-              className="text-2xl font-bold"
-              style={{
-                color: 'white',
-                textShadow: '0 0 10px rgba(59,130,246,0.8), 0 0 20px rgba(59,130,246,0.6), 0 0 30px rgba(59,130,246,0.4), 0 0 40px rgba(59,130,246,0.3), -2px -2px 0 rgba(59,130,246,0.5), 2px -2px 0 rgba(59,130,246,0.5), -2px 2px 0 rgba(59,130,246,0.5), 2px 2px 0 rgba(59,130,246,0.5), 0 4px 15px rgba(0,0,0,0.3)',
-                WebkitTextStroke: '1px rgba(59,130,246,0.6)',
-                filter: 'drop-shadow(0 0 15px rgba(59,130,246,0.7))'
-              }}
-            >
+            <span className="text-2xl font-bold brand-text-glow">
               BlueGuard
             </span>
             <span className="ml-3 text-xs bg-primary/20 text-primary px-2 py-1 rounded border border-primary/30 animate-pulse">PATENT PENDING</span>
@@ -83,8 +74,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 relative overflow-hidden">
         {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-50"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-60"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.08),transparent_60%)]"></div>
         
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -93,14 +84,13 @@ export default function Home() {
               <span className="text-sm font-medium">Hardware-Level Bluetooth Security</span>
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-foreground mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-            <span style={{ 
-              color: 'white',
-              textShadow: '0 0 10px rgba(59,130,246,0.8), 0 0 20px rgba(59,130,246,0.6), 0 0 30px rgba(59,130,246,0.4), 0 0 40px rgba(59,130,246,0.3), -2px -2px 0 rgba(59,130,246,0.5), 2px -2px 0 rgba(59,130,246,0.5), -2px 2px 0 rgba(59,130,246,0.5), 2px 2px 0 rgba(59,130,246,0.5), 0 4px 15px rgba(0,0,0,0.3)',
-              WebkitTextStroke: '1px rgba(59,130,246,0.6)',
-              filter: 'drop-shadow(0 0 15px rgba(59,130,246,0.7))'
-            }}>BlueGuard</span><br />
-            <span className="text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent" style={{ textShadow: '0 2px 15px rgba(59,130,246,0.4), 0 4px 25px rgba(59,130,246,0.2)' }}>Protecting Every Device From Day One</span>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-semibold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+            <span className="text-white hero-title-glow">BlueGuard</span><br />
+            <span className="bg-gradient-to-r from-primary via-primary to-blue-400 bg-clip-text text-transparent">
+              One Vulnerability.<br />
+              Billions of Devices.<br />
+              One Solution.
+            </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
             The first hardware-level security solution addressing a universal vulnerability 
@@ -111,13 +101,17 @@ export default function Home() {
             <span className="text-sm text-muted-foreground">Three U.S. Provisional Patents Pending</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
-            <Button size="lg" className="text-lg px-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              Learn More
-              <span className="ml-2">→</span>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 hover:bg-primary/10 hover:scale-105 transition-all duration-300">
-              Contact Us
-            </Button>
+            <a href="#how-it-works" aria-label="Learn more about how BlueGuard works">
+              <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
+                Learn More
+                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </Button>
+            </a>
+            <a href="#contact" aria-label="Contact the BlueGuard team">
+              <Button size="lg" variant="outline" className="text-lg px-8 hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-300">
+                Contact Us
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -125,21 +119,185 @@ export default function Home() {
       {/* Real World Stories - Jennifer, Celeste, Sarah */}
       <RealWorldStories />
 
-      {/* Live Threat Visualization Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-card/30 to-transparent">
+      {/* BLE Network Vulnerability & Critical Boot Window Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-red-950/10 to-transparent border-y border-red-500/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 border border-primary/20">
-              <Activity className="w-4 h-4 animate-pulse" />
-              <span className="text-sm font-medium">Live Monitoring</span>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-500 px-4 py-2 rounded-full mb-6 border border-red-500/20">
+              <AlertTriangle className="w-4 h-4 animate-pulse" />
+              <span className="text-sm font-medium">Critical Security Gap</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Real-Time Threat Protection</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              See how BlueGuard detects and blocks Bluetooth threats in real-time
+            <h2 className="text-4xl md:text-5xl font-semibold text-foreground mb-6">
+              The Invisible Network: BLE Is Just WiFi Without Security
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Every Bluetooth device creates an invisible wireless network—just like WiFi, but with virtually no protection
             </p>
           </div>
-          <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            <ThreatGraph />
+
+          {/* BLE vs WiFi Comparison */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+            <div className="bg-card border-2 border-primary/30 rounded-xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Radio className="w-8 h-8 text-primary" />
+                <h3 className="text-2xl font-semibold">WiFi Network</h3>
+              </div>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                  <span>Password protection (WPA2/WPA3)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                  <span>Encryption by default</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                  <span>Network visibility controls</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                  <span>Firewall protection</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-card border-2 border-red-500/30 rounded-xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Radio className="w-8 h-8 text-red-500" />
+                <h3 className="text-2xl font-semibold text-red-500">BLE Network</h3>
+              </div>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
+                  <span className="text-red-400">Often NO password during first boot</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
+                  <span className="text-red-400">Minimal encryption until paired</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
+                  <span className="text-red-400">Always broadcasting presence</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
+                  <span className="text-red-400">No firewall layer</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* The Critical Boot Window */}
+          <div className="bg-gradient-to-br from-red-950/30 to-orange-950/20 border-2 border-red-500/30 rounded-2xl p-8 md:p-12 mb-16">
+            <h3 className="text-3xl font-bold text-center mb-8 text-red-400">The 4-Second Vulnerability Window</h3>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-background/50 rounded-xl p-6 border border-red-500/30">
+                <div className="text-4xl font-bold text-red-500 mb-2">0-4 sec</div>
+                <h4 className="text-xl font-semibold mb-3 text-red-400">Device Boots</h4>
+                <p className="text-muted-foreground text-sm">Bluetooth hardware initializes. BLE network active and vulnerable. <span className="text-red-400 font-semibold">NO PROTECTION YET.</span></p>
+              </div>
+
+              <div className="bg-background/50 rounded-xl p-6 border border-orange-500/30">
+                <div className="text-4xl font-bold text-orange-500 mb-2">4-7 sec</div>
+                <h4 className="text-xl font-semibold mb-3 text-orange-400">OS Loading</h4>
+                <p className="text-muted-foreground text-sm">Operating system begins to load. Antivirus still offline. Firewall not active. <span className="text-orange-400 font-semibold">STILL VULNERABLE.</span></p>
+              </div>
+
+              <div className="bg-background/50 rounded-xl p-6 border border-green-500/30">
+                <div className="text-4xl font-bold text-green-500 mb-2">7+ sec</div>
+                <h4 className="text-xl font-semibold mb-3 text-green-400">Security Online</h4>
+                <p className="text-muted-foreground text-sm">Traditional security software finally loads. <span className="text-green-400 font-semibold">TOO LATE</span> - attack already complete.</p>
+              </div>
+            </div>
+
+            <div className="bg-red-950/40 border-2 border-red-500/50 rounded-xl p-6 text-center">
+              <p className="text-lg text-red-400 font-semibold mb-2">
+                Within 4 seconds, an attacker can: compromise firmware, inject malware, establish persistence
+              </p>
+              <p className="text-muted-foreground">
+                Traditional security solutions load at 7+ seconds. <span className="text-red-400 font-semibold">They are ALWAYS too late.</span>
+              </p>
+            </div>
+          </div>
+
+          {/* How BLE Cascading Attacks Work */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-center mb-8">How Cascading BLE Attacks Spread</h3>
+
+            <div className="space-y-6">
+              <div className="bg-card border-l-4 border-red-500 p-6 rounded-r-xl">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center border-2 border-red-500">
+                    <span className="text-red-500 font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Initial Compromise (0-4 seconds)</h4>
+                    <p className="text-muted-foreground">Attacker exploits unprotected BLE during first boot. Like connecting to an open WiFi network—no password needed.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card border-l-4 border-orange-500 p-6 rounded-r-xl">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center border-2 border-orange-500">
+                    <span className="text-orange-500 font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Device-to-Device Spread (Day 1)</h4>
+                    <p className="text-muted-foreground">Compromised device scans for other BLE devices on the network. Your phone, laptop, smart watch—all connected via invisible BLE networks.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card border-l-4 border-yellow-500 p-6 rounded-r-xl">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center border-2 border-yellow-500">
+                    <span className="text-yellow-500 font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Network Takeover (Day 2)</h4>
+                    <p className="text-muted-foreground">Attacker pivots through BLE connections to WiFi, smart home devices, IoT systems. One compromised device becomes a gateway to everything.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card border-l-4 border-purple-500 p-6 rounded-r-xl">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center border-2 border-purple-500">
+                    <span className="text-purple-500 font-bold">4</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Silent Persistence (200+ Days)</h4>
+                    <p className="text-muted-foreground">Malware embedded in firmware survives reboots, updates, factory resets. Average detection time: 200+ days.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* BlueGuard Solution */}
+          <div className="bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 rounded-2xl p-8 md:p-12 mt-16 text-center">
+            <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h3 className="text-3xl font-bold mb-4">BlueGuard: The ONLY Solution for the 4-Second Window</h3>
+            <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
+              BlueGuard activates at <span className="text-primary font-semibold">0 seconds</span>—intercepting BLE traffic before the OS even starts loading. We protect the critical window that every other security solution misses.
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+              <div className="bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary mb-1">0 sec</div>
+                <div className="text-sm text-muted-foreground">BlueGuard Active</div>
+              </div>
+              <div className="bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary mb-1">Hardware</div>
+                <div className="text-sm text-muted-foreground">USB-Level Protection</div>
+              </div>
+              <div className="bg-background/50 rounded-lg p-4">
+                <div className="text-2xl font-bold text-primary mb-1">100%</div>
+                <div className="text-sm text-muted-foreground">Boot Coverage</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -152,7 +310,7 @@ export default function Home() {
               <Award className="w-4 h-4" />
               <span className="text-xs font-medium">PATENT PENDING TECHNOLOGY</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>How BlueGuard Works</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">How BlueGuard Works</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Hardware-enforced security that activates before your operating system even loads
             </p>
@@ -199,8 +357,8 @@ export default function Home() {
 
             {/* How It Works Steps */}
             <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-700 delay-300">
-              <div className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="flex gap-4 group hover:translate-x-1 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <span className="text-xl font-semibold text-primary">1</span>
                 </div>
                 <div>
@@ -209,8 +367,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="flex gap-4 group hover:translate-x-1 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <span className="text-xl font-semibold text-primary">2</span>
                 </div>
                 <div>
@@ -219,8 +377,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="flex gap-4 group hover:translate-x-1 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <span className="text-xl font-semibold text-primary">3</span>
                 </div>
                 <div>
@@ -229,8 +387,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <div className="flex gap-4 group hover:translate-x-1 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <span className="text-xl font-semibold text-primary">4</span>
                 </div>
                 <div>
@@ -261,15 +419,15 @@ export default function Home() {
       <section id="solution" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Why BlueGuard?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Why BlueGuard?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Hardware-level protection for the most critical vulnerability in modern devices
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
               <CardContent className="pt-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Shield className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors duration-300">First-Boot Protection</h3>
@@ -279,9 +437,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
               <CardContent className="pt-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Radio className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors duration-300">Universal Coverage</h3>
@@ -291,9 +449,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
               <CardContent className="pt-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Lock className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors duration-300">Patent-Protected</h3>
@@ -310,7 +468,7 @@ export default function Home() {
       <section id="devices" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-card/30 to-transparent">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Protection for Every Device</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Protection for Every Device</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               BlueGuard secures all Bluetooth-enabled hardware from the moment they power on
             </p>
@@ -318,9 +476,9 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Smartphones */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
               <CardContent className="pt-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <Smartphone className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold text-center mb-4 text-card-foreground group-hover:text-primary transition-colors duration-300">Smartphones</h3>
@@ -346,9 +504,9 @@ export default function Home() {
             </Card>
 
             {/* Laptops */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
               <CardContent className="pt-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <Laptop className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold text-center mb-4 text-card-foreground group-hover:text-primary transition-colors duration-300">Laptops & Computers</h3>
@@ -374,9 +532,9 @@ export default function Home() {
             </Card>
 
             {/* Smart Home */}
-            <Card className="border-2 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 bg-card hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
+            <Card className="border border-border hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 bg-card hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
               <CardContent className="pt-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mb-6 mx-auto border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <HomeIcon className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold text-center mb-4 text-card-foreground group-hover:text-primary transition-colors duration-300">Smart Home & IoT</h3>
@@ -408,7 +566,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Market Opportunity</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Market Opportunity</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Addressing a critical need in a rapidly expanding cybersecurity market
             </p>
@@ -416,22 +574,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <Card className="bg-card border-border hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
               <CardContent className="pt-6 text-center">
-                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
-                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>$351B</div>
+                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
+                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300 tabular-nums">$351B</div>
                 <p className="text-muted-foreground">Global cybersecurity market by 2030</p>
               </CardContent>
             </Card>
             <Card className="bg-card border-border hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
               <CardContent className="pt-6 text-center">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
-                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>5.6B</div>
+                <Users className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
+                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300 tabular-nums">5.6B</div>
                 <p className="text-muted-foreground">Bluetooth devices shipped annually worldwide</p>
               </CardContent>
             </Card>
             <Card className="bg-card border-border hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
               <CardContent className="pt-6 text-center">
-                <Shield className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
-                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>75%</div>
+                <Shield className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
+                <div className="text-5xl font-semibold text-primary mb-2 group-hover:scale-110 transition-transform duration-300 tabular-nums">75%</div>
                 <p className="text-muted-foreground">Organizations restructuring security by 2025 (Gartner)</p>
               </CardContent>
             </Card>
@@ -476,7 +634,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-card/30 to-transparent">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Competitive Advantage</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Competitive Advantage</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Patent-protected innovation in a strategic market position
             </p>
@@ -562,7 +720,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Investment Opportunity</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Investment Opportunity</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Strategic entry into a high-growth market with defensible IP and clear exit potential
             </p>
@@ -574,17 +732,17 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
                     <p className="text-sm text-muted-foreground mb-2">Current Round</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>$250K</p>
+                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">$250K</p>
                     <p className="text-xs text-muted-foreground">Seed Investment</p>
                   </div>
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
                     <p className="text-sm text-muted-foreground mb-2">20-Year Projection</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>$2B-$8B</p>
+                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">$2B-$8B</p>
                     <p className="text-xs text-muted-foreground">Potential Valuation</p>
                   </div>
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
                     <p className="text-sm text-muted-foreground mb-2">Potential ROI</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.2), 0 2px 0 rgba(59,130,246,0.3), 0 3px 0 rgba(59,130,246,0.2), 0 6px 12px rgba(59,130,246,0.4)' }}>8,000x-32,000x</p>
+                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">8,000x-32,000x</p>
                     <p className="text-xs text-muted-foreground">Over 20 Years</p>
                   </div>
                 </div>
@@ -639,7 +797,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-card/30 to-transparent">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Mission & Vision</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Mission & Vision</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Building a more secure digital future, one device at a time
             </p>
@@ -648,7 +806,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-in fade-in slide-in-from-left-6 duration-700 delay-100">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 border-2 border-primary/40 hover:scale-110 hover:rotate-6 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 border-2 border-primary/40 hover:scale-110 hover:rotate-2 transition-all duration-300">
                   <Shield className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-4">Our Mission</h3>
@@ -663,7 +821,7 @@ export default function Home() {
 
             <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-in fade-in slide-in-from-right-6 duration-700 delay-200">
               <CardContent className="pt-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 border-2 border-primary/40 hover:scale-110 hover:rotate-6 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 border-2 border-primary/40 hover:scale-110 hover:rotate-2 transition-all duration-300">
                   <TrendingUp className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-4">Our Vision</h3>
@@ -682,21 +840,21 @@ export default function Home() {
             <h3 className="text-2xl font-semibold text-foreground mb-6 text-center">Strategic Focus Areas</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Cpu className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-2">Hardware Innovation</h4>
                 <p className="text-xs sm:text-sm text-muted-foreground">Developing next-generation security chips and USB devices</p>
               </div>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Users className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-2">Strategic Partnerships</h4>
                 <p className="text-xs sm:text-sm text-muted-foreground">Collaborating with device manufacturers and OEMs</p>
               </div>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 border border-primary/20 group-hover:scale-110 group-hover:rotate-2 transition-all duration-300">
                   <Award className="w-7 h-7 text-primary" />
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-2">IP Portfolio</h4>
@@ -711,7 +869,7 @@ export default function Home() {
       <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.15)' }}>Leadership Team</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Leadership Team</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Experienced leaders driving innovation in hardware security
             </p>
@@ -721,7 +879,7 @@ export default function Home() {
             {/* Philip S. Wright - CEO */}
             <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <span className="text-3xl font-semibold text-primary">PW</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Philip S. Wright</h3>
@@ -746,7 +904,7 @@ export default function Home() {
             {/* Steven Blatt - CIO */}
             <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <span className="text-3xl font-semibold text-primary">SB</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Steven Blatt</h3>
@@ -771,7 +929,7 @@ export default function Home() {
             {/* Lesli Mayorga - CFO */}
             <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
                   <span className="text-3xl font-semibold text-primary">LM</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Lesli Mayorga</h3>
@@ -798,16 +956,18 @@ export default function Home() {
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Interested in learning more about BlueGuard or discussing investment opportunities?
             </p>
-            <Button size="lg" className="text-lg px-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              Schedule a Meeting
-              <span className="ml-2">→</span>
-            </Button>
+            <a href="mailto:pwright@bluetoothdefense.com?subject=Meeting Request - BlueGuard&body=Hello Philip,%0D%0A%0D%0AI'm interested in learning more about BlueGuard and would like to schedule a meeting.%0D%0A%0D%0AThank you.">
+              <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
+                Schedule a Meeting
+                <span className="ml-2">→</span>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-card/50 border-t border-border">
+      <footer className="py-12 px-6 bg-card/30 border-t border-border/50">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4 group">
             <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
