@@ -38,10 +38,10 @@ export default function RealWorldStories() {
                   <p className="text-sm text-red-500 text-center mb-4 font-semibold tracking-wide">INVESTIGATIVE JOURNALIST</p>
                   <div className="space-y-3 mb-6">
                     <p className="text-muted-foreground leading-relaxed text-sm">
-                      At 8:47 AM on a Tuesday, Jennifer powered on her new laptop to continue her high-profile investigations into corporate corruption...
+                      At 8:47 AM on a Tuesday, Jennifer powered on her new laptop to continue her investigation into corporate corruption, believing she was working from a secure machine.
                     </p>
                     <p className="text-muted-foreground leading-relaxed text-sm font-medium">
-                      <span className="text-red-500">Within four seconds</span>, her device was completely compromised. For months, every keystroke, every confidential source, every protected document was monitored.
+                      <span className="text-red-500">Within four seconds</span>, it was silently taken overturning her device, her sources, and her private life into an open window for an attacker she never saw coming.
                     </p>
                   </div>
                   <DialogTrigger asChild>
@@ -68,11 +68,15 @@ export default function RealWorldStories() {
               </DialogHeader>
               <div className="prose prose-lg max-w-none mt-6 text-foreground">
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  Jennifer, an investigative journalist renowned for her high-profile investigations into corporate corruption, received a new laptop. At 8:47 AM on a Tuesday, upon powering on the device, she prepared to continue her work, which involved sensitive data and confidential sources. Unbeknownst to her, this new hardware, like every device currently manufactured, represented a universal, unaddressed vulnerability, about to be exploited in a sophisticated cyberattack.
+                  Jennifer is an investigative journalist who lives and dies by the safety of her sources. When she unboxed a new laptop one Tuesday morning, it felt like a fresh startfaster, cleaner, dedicated to the high-profile corruption case shed been building for months. She hit the power button, opened her notes, and got back to work.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  The sheer volume of newly discovered flaws, with DeepStrike 2025 reporting over 21,500 new CVEs disclosed in H1 2025, an average of 133 per day, underscores the constant emergence of new attack vectors. The urgency of this threat is further highlighted by CISA's Known Exploited Vulnerabilities Catalog, which lists over 1,449 actively exploited vulnerabilities as of 2025. "The vast majority of cyberattacks today exploit vulnerabilities that are inherent in the hardware's foundational layers, regardless of the vendor or price point," states a recent report from the National Institute of Standards and Technology (NIST).
+                  She never saw the real story that started that morning: a first-boot compromise launched from less than 200 meters away. In the time it took the operating system to load, an attacker slipped under every layer of her security and made her secure laptop their listening post. For months, every keystroke, every draft, and every source interaction ran through their hands first.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-6 text-base">
+                  The sheer volume of newly discovered flaws, with DeepStrike 2025 reporting over 21,500 new CVEs disclosed in H1 2025an average of 133 per dayunderscores the constant emergence of new attack vectors. The urgency of this threat is further highlighted by CISA's Known Exploited Vulnerabilities Catalog, which lists over 1,449 actively exploited vulnerabilities as of 2025. "The vast majority of cyberattacks today exploit vulnerabilities that are inherent in the hardware's foundational layers, regardless of the vendor or price point," states a recent report from the National Institute of Standards and Technology (NIST).
                 </p>
 
                 <div className="bg-red-950/20 border-2 border-red-500/30 rounded-xl p-6 my-8">
@@ -151,10 +155,10 @@ export default function RealWorldStories() {
                   <p className="text-sm text-orange-500 text-center mb-4 font-semibold tracking-wide">HOLLYWOOD ACTRESS</p>
                   <div className="space-y-3 mb-6">
                     <p className="text-muted-foreground leading-relaxed text-sm">
-                      Celeste lived in a $50M fortress with $2M in security infrastructure. Smart locks, cameras, encrypted networks—everything money could buy...
+                      Celeste lived in a $50M fortress with $2M in security hardwarearmed guards, biometrics, smart locks, cameras, encrypted everything.
                     </p>
                     <p className="text-muted-foreground leading-relaxed text-sm font-medium">
-                      A <span className="text-orange-500">$169 Flipper Zero</span> defeated it all. Her Tesla, smart home, and personal devices were completely compromised through Bluetooth vulnerabilities.
+                      A <span className="text-orange-500">$169 Flipper Zero</span> cut straight through all of it, turning her car, her smart home, and her safe place into someone elses remote-controlled stage.
                     </p>
                   </div>
                   <DialogTrigger asChild>
@@ -181,7 +185,7 @@ export default function RealWorldStories() {
               </DialogHeader>
               <div className="prose prose-lg max-w-none mt-6 text-foreground">
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  Hollywood's reigning queen, Celeste Thorne, lived in an ultra-modern, "impregnable" $50 million fortress in the Hollywood Hills. Her meticulously guarded privacy was shielded by 24/7 armed guards, biometric locks, comprehensive surveillance, and $2 million in cutting-edge security infrastructure, with her custom Tesla resting in its climate-controlled garage. Yet, a new threat emerged, silent and unseen, ready to dismantle the digital infrastructure of even the most secure domains. This vulnerability is not exclusive to high-tech mansions; it affects every device currently manufactured, regardless of brand or price.
+                  Hollywood's reigning queen, Celeste Thorne, lived in what her team called "the safest house in the Hills." The $50 million glass-and-concrete fortress had everything: 24/7 armed security, biometric locks, layered surveillance, and a climate-controlled garage for her custom Tesla. On paper, it was impenetrable. In reality, all of that protection sat on top of the same invisible weaknesses as any off-the-shelf smart home.
                 </p>
 
                 <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 p-6 rounded-xl border-l-4 border-orange-500 my-8 shadow-lg">
@@ -270,7 +274,7 @@ export default function RealWorldStories() {
                       Sarah, a dedicated child therapist, trusted a parental control app to protect her daughter Lily. She never imagined it would be weaponized against her...
                     </p>
                     <p className="text-muted-foreground leading-relaxed text-sm font-medium">
-                      Her ex-husband exploited <span className="text-purple-500">Bluetooth vulnerabilities</span> to fabricate evidence, manipulate records, and ultimately win custody. Sarah lost her daughter and her career.
+                      Her ex-husband exploited <span className="text-purple-500">Bluetooth vulnerabilities</span> to fabricate evidence, manipulate records, and ultimately win custody. Sarah lost her daughter and her careerand the thin line in her mind between real danger and relentless fear.
                     </p>
                   </div>
                   <DialogTrigger asChild>
@@ -297,7 +301,11 @@ export default function RealWorldStories() {
               </DialogHeader>
               <div className="prose prose-lg max-w-none mt-6 text-foreground">
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  Sarah, a child therapist whose career was built on understanding and nurturing young minds, meticulously managed every aspect of her ten-year-old daughter Lily's digital life. Among her arsenal of parental tools was "GuardianShield," a widely trusted parental control application installed on Lily's iPhone. It was meant to be a tether of protection, monitoring screen time and location, ensuring Lily's safety in an increasingly connected world. Sarah believed she had built a digital sanctuary, unaware it was about to become the very instrument of her undoing, wielded by the one person she once trusted most. This story serves as a chilling reminder that a universal vulnerability exists, affecting every device currently manufactured, regardless of brand, price, or supposed security features.
+                  Sarah, a child therapist whose career was built on understanding and protecting young minds, meticulously managed every aspect of her ten-year-old daughter Lily's digital life. Among her tools was "GuardianShield," a widely trusted parental control app on Lily's iPhone—her way of watching over Lily when she couldn't be in the room. Sarah believed she had built a digital sanctuary, a thin layer of safety between her daughter and a chaotic world.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed mb-6 text-base">
+                  In the end, that same app became the instrument of her undoing, wielded by the one person she once trusted most. What she couldn't see was the deeper problem beneath the brand name: a class of vulnerabilities baked into the hardware and firmware of almost every modern device, regardless of who makes it or how much it costs.
                 </p>
 
                 <div className="bg-gradient-to-r from-purple-500/10 to-purple-600/5 p-6 rounded-xl border-l-4 border-purple-500 my-8 shadow-lg">
@@ -308,7 +316,7 @@ export default function RealWorldStories() {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  Robert, her estranged husband, seethed with a calculated rage beneath a veneer of calm. The custody battle had been acrimonious, and he was determined to win, no matter the cost. He saw GuardianShield not as a barrier, but as an open door, a vulnerability in the digital fortress Sarah had so carefully constructed. This exploit highlights a critical flaw present in virtually all modern hardware, demonstrating a universal susceptibility that knows no exceptions. According to a recent report by the National Institute of Standards and Technology (NIST), over 70% of newly discovered critical vulnerabilities (CVEs) involve fundamental hardware or firmware flaws that are present across entire product lines, regardless of the operating system or installed applications. These "first-boot exploits" are increasingly targeted by adversaries due to their widespread impact and difficulty to patch post-deployment.
+                  Robert, her estranged husband, seethed with calculated rage beneath a veneer of calm. The custody battle had been acrimonious, and he was determined to win, no matter the cost. He saw GuardianShield not as a barrier, but as an open door—a fault line running through the digital fortress Sarah thought she had built. The exploit he used rests on a critical flaw present in virtually all modern hardware, a universal susceptibility that knows no exceptions. According to a recent report by the National Institute of Standards and Technology (NIST), over 70% of newly discovered critical vulnerabilities (CVEs) involve fundamental hardware or firmware flaws present across entire product lines, regardless of the operating system or installed apps. These "first-boot exploits" are increasingly targeted precisely because they are so pervasive and so difficult to patch once devices are in the wild.
                 </p>
 
                 <h4 className="text-xl font-semibold text-foreground mt-8 mb-4 flex items-center gap-2">
@@ -362,7 +370,7 @@ export default function RealWorldStories() {
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">
-                  The aftermath was a brutal, public crucifixion. Robert, emboldened by his victory, leaked carefully curated snippets of the 'evidence' to online forums and local media. Sarah's career, once a source of pride and purpose, evaporated. Patients cancelled appointments, professional organizations questioned her ethics, and her reputation as a compassionate therapist was irrevocably shattered. Friends, unable to reconcile the public accusations with the Sarah they knew, slowly distanced themselves, leaving her isolated in a storm of gossip and judgment.
+                  The aftermath was brutal. Robert, emboldened by his victory, leaked carefully curated snippets of the "evidence" to forums and local media. Sarah's career, once a source of pride and purpose, evaporated. Patients cancelled, professional bodies questioned her ethics, and her reputation as a compassionate therapist collapsed in slow motion. Friends who couldnt reconcile the headlines with the woman they knew quietly backed away, leaving her alone with the noise in her head.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6 text-base">

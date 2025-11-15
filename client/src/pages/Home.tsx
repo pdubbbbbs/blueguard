@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import RealWorldStories from "@/components/RealWorldStories";
+import ByTheNumbers from "@/components/ByTheNumbers";
 import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X, AlertTriangle } from "lucide-react";
 
 export default function Home() {
@@ -92,9 +93,12 @@ export default function Home() {
               One Solution.
             </span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
             The first hardware-level security solution addressing a universal vulnerability 
             affecting every Bluetooth-enabled device currently manufactured.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-250">
+            In plain terms: a pre-boot Bluetooth firewall that closes the global BLE security blind spot from the moment a device powers on.
           </p>
           <div className="flex items-center justify-center gap-2 mb-8 animate-in fade-in duration-700 delay-300">
             <Award className="w-5 h-5 text-primary" />
@@ -107,9 +111,9 @@ export default function Home() {
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </Button>
             </a>
-            <a href="#contact" aria-label="Contact the BlueGuard team">
+            <a href="#contact" aria-label="Request an investor and technical briefing">
               <Button size="lg" variant="outline" className="text-lg px-8 hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-300">
-                Contact Us
+                Request Investor Briefing
               </Button>
             </a>
           </div>
@@ -119,8 +123,35 @@ export default function Home() {
       {/* Real World Stories - Jennifer, Celeste, Sarah */}
       <RealWorldStories />
 
+      {/* By the Numbers - Shared Threat Surface */}
+      <ByTheNumbers />
+
+      {/* Initial Markets Strip */}
+      <section className="py-10 px-6 bg-gradient-to-r from-primary/5 via-background to-primary/5 border-y border-border/40">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-3">Who BlueGuard Is Built For</h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto mb-6">
+            BlueGuard is designed for anyone who relies on Bluetooth—from individuals at home to OEMs and enterprises that ship and secure millions of devices.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-3 max-w-4xl mx-auto text-sm sm:text-base text-muted-foreground">
+            <div className="bg-card/70 border border-border rounded-xl p-4">
+              <p className="font-medium text-foreground mb-1">Everyday Users & Households</p>
+              <p>People who want a simple, plug-and-play way to protect their phones, laptops, wearables, and smart devices.</p>
+            </div>
+            <div className="bg-card/70 border border-border rounded-xl p-4">
+              <p className="font-medium text-foreground mb-1">IT & Security Teams</p>
+              <p>Organizations that need boot-level Bluetooth assurance across fleets of endpoints and critical systems.</p>
+            </div>
+            <div className="bg-card/70 border border-border rounded-xl p-4">
+              <p className="font-medium text-foreground mb-1">Device Manufacturers & OEMs</p>
+              <p>Vendors looking to ship devices with built-in BLE boot protection and clear security guarantees.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BLE Network Vulnerability & Critical Boot Window Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-red-950/10 to-transparent border-y border-red-500/20">
+      <section id="threat" className="py-20 px-6 bg-gradient-to-b from-red-950/10 to-transparent border-y border-red-500/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-500 px-4 py-2 rounded-full mb-6 border border-red-500/20">
@@ -128,10 +159,10 @@ export default function Home() {
               <span className="text-sm font-medium">Critical Security Gap</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-semibold text-foreground mb-6">
-              The Invisible Network: BLE Is Just WiFi Without Security
+              The Invisible Network: BLE Is the Global Wireless Security Blind Spot
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every Bluetooth device creates an invisible wireless network—just like WiFi, but with virtually no protection
+              BLE quietly underpins the modern world—from phones and laptops to sensors, vehicles, and wearables—creating invisible wireless networks that almost no one monitors or secures. Unlike WiFi, BLE is often unauthenticated and effectively unprotected at first boot, turning it into a pervasive, unmonitored attack surface.
             </p>
           </div>
 
@@ -145,19 +176,19 @@ export default function Home() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Password protection (WPA2/WPA3)</span>
+                  <span>Password enforcement (WPA2/WPA3) on almost every network</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Encryption by default</span>
+                  <span>Strong encryption by default and standardized best practices</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Network visibility controls</span>
+                  <span>Centralized visibility and management (SSIDs, logs, controllers)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Firewall protection</span>
+                  <span>Firewall and segmentation as part of normal network design</span>
                 </li>
               </ul>
             </div>
@@ -170,19 +201,19 @@ export default function Home() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span className="text-red-400">Often NO password during first boot</span>
+                  <span className="text-red-400">No meaningful authentication or encryption at first boot on most devices</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span className="text-red-400">Minimal encryption until paired</span>
+                  <span className="text-red-400">Devices constantly broadcasting presence with little or no monitoring</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span className="text-red-400">Always broadcasting presence</span>
+                  <span className="text-red-400">No central inventory, logs, or policy—BLE is not treated as a network at all</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
-                  <span className="text-red-400">No firewall layer</span>
+                  <span className="text-red-400">Sits outside traditional firewalls and WiFi controls—a true blind spot</span>
                 </li>
               </ul>
             </div>
@@ -311,8 +342,11 @@ export default function Home() {
               <span className="text-xs font-medium">PATENT PENDING TECHNOLOGY</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">How BlueGuard Works</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Hardware-enforced security that activates before your operating system even loads
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-3">
+              Hardware-enforced security that activates before your operating system even loads.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Practically, BlueGuard sits between existing hardware and the outside world, acting as a vendor-agnostic Bluetooth security layer that OEMs can ship without changing their firmware.
             </p>
           </div>
 
@@ -732,18 +766,18 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
                     <p className="text-sm text-muted-foreground mb-2">Current Round</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">$250K</p>
-                    <p className="text-xs text-muted-foreground">Seed Investment</p>
+                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">Pre-Seed</p>
+                    <p className="text-xs text-muted-foreground">Round size available on request</p>
                   </div>
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
-                    <p className="text-sm text-muted-foreground mb-2">20-Year Projection</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">$2B-$8B</p>
-                    <p className="text-xs text-muted-foreground">Potential Valuation</p>
+                    <p className="text-sm text-muted-foreground mb-2">Market Context</p>
+                    <p className="text-lg font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">Billions of BLE devices</p>
+                    <p className="text-xs text-muted-foreground">No standard for boot-level BLE security today.</p>
                   </div>
                   <div className="text-center group hover:scale-105 transition-transform duration-300">
-                    <p className="text-sm text-muted-foreground mb-2">Potential ROI</p>
-                    <p className="text-5xl font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">8,000x-32,000x</p>
-                    <p className="text-xs text-muted-foreground">Over 20 Years</p>
+                    <p className="text-sm text-muted-foreground mb-2">Exit Paths</p>
+                    <p className="text-lg font-semibold text-primary mb-1 group-hover:scale-110 transition-transform duration-300">Strategic acquisition</p>
+                    <p className="text-xs text-muted-foreground">Chipmakers, security vendors, or major OEMs.</p>
                   </div>
                 </div>
 
@@ -784,10 +818,12 @@ export default function Home() {
             </Card>
 
             <div className="mt-8 text-center">
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Strategic timing in the 2024-2025 window before widespread market awareness creates 
-                a unique opportunity for early investors to capture significant value.
-              </p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Why Now</h3>
+              <div className="text-sm text-muted-foreground max-w-3xl mx-auto space-y-2 leading-relaxed text-left sm:text-center">
+                <p>• BLE device volume is exploding across consumer, medical, industrial, and automotive markets, but boot-level security standards do not exist.</p>
+                <p>• Regulators are beginning to demand stronger guarantees around device integrity and secure boot paths.</p>
+                <p>• Incumbent tools focus on WiFi and OS-level threats, leaving BLE boot sequences untouched—a gap that BlueGuard is purpose-built to close.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -799,7 +835,7 @@ export default function Home() {
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Mission & Vision</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Building a more secure digital future, one device at a time
+              Building the missing security layer for the world’s Bluetooth-enabled devices.
             </p>
           </div>
 
