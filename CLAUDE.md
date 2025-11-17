@@ -14,6 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Authentication**: Manus OAuth with JWT-based session management
 - **Build Tools**: Vite 7, pnpm package manager
 - **Deployment**: Cloudflare Pages with GitHub Actions CI/CD
+- **Testing**: Vitest (server-side only)
 
 ## Development Commands
 
@@ -34,7 +35,7 @@ pnpm check
 # Code formatting
 pnpm format
 
-# Run tests
+# Run all tests (server-side only)
 pnpm test
 
 # Database migrations
@@ -54,7 +55,7 @@ pnpm test <test-name-pattern>
 ```
 ├── client/               # Frontend React application
 │   ├── src/
-│   │   ├── pages/       # Page components (Home, ComponentShowcase, NotFound)
+│   │   ├── pages/       # Page components (Home, ComponentShowcase, FontPreview, NotFound)
 │   │   ├── components/  # Reusable UI components (includes ui/ directory with shadcn components)
 │   │   ├── hooks/       # Custom React hooks
 │   │   ├── lib/         # Client utilities and tRPC client setup
@@ -70,7 +71,13 @@ pnpm test <test-name-pattern>
 │   │   ├── cookies.ts   # Session cookie management
 │   │   ├── oauth.ts     # Manus OAuth integration
 │   │   ├── sdk.ts       # Manus SDK integrations
-│   │   └── vite.ts      # Vite dev server integration
+│   │   ├── env.ts       # Environment variables configuration
+│   │   ├── vite.ts      # Vite dev server integration
+│   │   ├── dataApi.ts   # Data API integration
+│   │   ├── notification.ts  # Notification service
+│   │   ├── llm.ts       # LLM capabilities
+│   │   ├── imageGeneration.ts  # Image generation service
+│   │   └── voiceTranscription.ts  # Voice transcription service
 │   ├── db.ts            # Database operations (upsertUser, getUserByOpenId)
 │   ├── routers.ts       # Main tRPC router (appRouter)
 │   └── storage.ts       # Manus storage proxy for file uploads
@@ -79,7 +86,10 @@ pnpm test <test-name-pattern>
 │   └── types.ts         # Shared TypeScript types
 ├── drizzle/             # Database schema and migrations
 │   └── schema.ts        # User table schema
-└── dist/                # Build output (gitignored)
+├── dist/                # Build output (gitignored)
+│   └── public/          # Static files for deployment
+├── patches/             # pnpm patches (wouter@3.7.1)
+└── backups/             # Original site backups
 ```
 
 ### Key Architectural Patterns
@@ -99,15 +109,16 @@ pnpm test <test-name-pattern>
 - LLM capabilities (`server/_core/llm.ts`)
 - Image generation (`server/_core/imageGeneration.ts`)
 - Voice transcription (`server/_core/voiceTranscription.ts`)
+- Data API (`server/_core/dataApi.ts`)
+- Notifications (`server/_core/notification.ts`)
 
-**Development vs Production**: In development mode, Vite middleware is used for hot module replacement. In production, Express serves static files from the `dist/` directory.
+**Development vs Production**: In development mode, Vite middleware is used for hot module replacement. In production, Express serves static files from the `dist/public/` directory.
 
 ### Path Aliases
 
 TypeScript and Vite are configured with these path aliases:
 - `@/*` → `client/src/*`
 - `@shared/*` → `shared/*`
-- `@assets/*` → `attached_assets/*`
 
 ## Database Operations
 
@@ -116,6 +127,8 @@ TypeScript and Vite are configured with these path aliases:
 # Generate migration files and apply them
 pnpm db:push
 ```
+
+**Note**: The `drizzle.config.ts` requires `DATABASE_URL` environment variable to be set. If it's not set, drizzle commands will throw an error.
 
 ### Schema Extension
 When adding new database tables:
@@ -150,8 +163,8 @@ const mutation = trpc.myFeature.create.useMutation();
 
 ### Automatic Deployment
 Every push to `main` branch triggers automatic deployment via GitHub Actions (`.github/workflows/deploy.yml`):
-1. Builds the project with `pnpm build`
-2. Deploys to Cloudflare Pages project named `bluetoothdefense`
+1. Builds the project with `pnpm build` (Node.js 22)
+2. Deploys `dist/public/` directory to Cloudflare Pages project named `bluetoothdefense`
 
 ### Required GitHub Secrets
 - `CLOUDFLARE_API_TOKEN`: API token with Cloudflare Pages Edit permission
@@ -160,7 +173,7 @@ Every push to `main` branch triggers automatic deployment via GitHub Actions (`.
 ### Manual Deployment
 ```bash
 pnpm build
-npx wrangler pages deploy dist --project-name=bluetoothdefense
+npx wrangler pages deploy dist/public --project-name=bluetoothdefense
 ```
 
 ## Environment Variables
@@ -168,13 +181,24 @@ npx wrangler pages deploy dist --project-name=bluetoothdefense
 The application uses these environment variables (defined in `.env` file, not committed to git):
 
 **Required for development:**
-- `DATABASE_URL`: MySQL/TiDB connection string (optional for local tooling)
+- `DATABASE_URL`: MySQL/TiDB connection string (required for database commands, optional for local tooling)
 - `PORT`: Server port (defaults to 3000)
 - `NODE_ENV`: Set to "development" or "production"
 
 **Manus Integration (provided by Manus platform):**
+- `VITE_APP_ID`: Manus application ID
+- `JWT_SECRET`: Secret for JWT token signing (used as cookieSecret)
+- `OAUTH_SERVER_URL`: Manus OAuth server URL
+- `OWNER_OPEN_ID`: OpenID of the owner/admin user
 - `BUILT_IN_FORGE_API_URL`: Manus storage proxy URL
 - `BUILT_IN_FORGE_API_KEY`: Manus storage proxy API key
+
+## Testing
+
+The project uses Vitest for testing:
+- Tests are configured for **server-side code only** (`vitest.config.ts`)
+- Test files should be placed in `server/**/*.test.ts` or `server/**/*.spec.ts`
+- Tests run in Node environment (not jsdom)
 
 ## Important Implementation Details
 
@@ -185,6 +209,10 @@ The application uses these environment variables (defined in `.env` file, not co
 **Admin User**: The first user with `openId` matching `ENV.ownerOpenId` automatically receives admin role.
 
 **Port Fallback**: Server automatically finds an available port starting from the configured `PORT` if the preferred port is busy.
+
+**Font**: The site uses Inter font family site-wide for consistency with the Manus platform.
+
+**Package Manager**: Uses pnpm with patches applied to `wouter@3.7.1` (see `patches/` directory).
 
 ## Code Style
 
