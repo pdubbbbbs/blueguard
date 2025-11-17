@@ -32,11 +32,12 @@ jobs:
       
       - name: Build project
         run: pnpm run build
-      
+
+      - name: Install Wrangler
+        run: pnpm add -g wrangler
+
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=bluetoothdefense
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm wrangler pages deploy dist/public --project-name=bluetoothdefense
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
