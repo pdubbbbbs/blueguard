@@ -161,10 +161,17 @@ const mutation = trpc.myFeature.create.useMutation();
 
 ## Deployment
 
+### Branch Strategy
+- **`master` branch**: Production deployments to bluetoothdefense.com
+- **`main` branch**: Preview deployments to main.bluetoothdefense.pages.dev
+- When ready to deploy to production, merge `main` into `master`
+
 ### Automatic Deployment
-Every push to `main` branch triggers automatic deployment via GitHub Actions (`.github/workflows/deploy.yml`):
+Pushes to either branch trigger automatic deployment via GitHub Actions (`.github/workflows/deploy.yml`):
 1. Builds the project with `pnpm build` (Node.js 22)
 2. Deploys `dist/public/` directory to Cloudflare Pages project named `bluetoothdefense`
+3. **`master` branch** → Production (bluetoothdefense.com)
+4. **`main` branch** → Preview (main.bluetoothdefense.pages.dev)
 
 ### Required GitHub Secrets
 - `CLOUDFLARE_API_TOKEN`: API token with Cloudflare Pages Edit permission
@@ -175,6 +182,16 @@ Every push to `main` branch triggers automatic deployment via GitHub Actions (`.
 pnpm build
 npx wrangler pages deploy dist/public --project-name=bluetoothdefense
 ```
+
+### Deploying to Production
+To deploy the latest changes to production (bluetoothdefense.com):
+```bash
+git checkout master
+git merge main
+git push origin master
+git checkout main
+```
+This will trigger the GitHub Actions workflow and deploy to production.
 
 ## Environment Variables
 
