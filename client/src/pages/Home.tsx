@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import RealWorldStories from "@/components/RealWorldStories";
-import ByTheNumbers from "@/components/ByTheNumbers";
 import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Menu, X, AlertTriangle } from "lucide-react";
 
 export default function Home() {
@@ -122,9 +121,6 @@ export default function Home() {
 
       {/* Real World Stories - Jennifer, Celeste, Sarah */}
       <RealWorldStories />
-
-      {/* By the Numbers - Shared Threat Surface */}
-      <ByTheNumbers />
 
       {/* Initial Markets Strip */}
       <section className="py-10 px-6 bg-gradient-to-r from-primary/5 via-background to-primary/5 border-y border-border/40">
@@ -913,7 +909,7 @@ export default function Home() {
             Hardware-Level Bluetooth Security for Every Device
           </p>
           <p className="text-xs text-muted-foreground">
-            © 2024 BlueGuard. All rights reserved. | Three U.S. Provisional Patents Pending
+            © 2025 BlueGuard. All rights reserved. | Three U.S. Provisional Patents Pending
           </p>
         </div>
       </footer>
