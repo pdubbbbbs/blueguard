@@ -3,13 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import RealWorldStories from "@/components/RealWorldStories";
 import ByTheNumbers from "@/components/ByTheNumbers";
-import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Mail, Linkedin, Phone, Menu, X, AlertTriangle } from "lucide-react";
+import { Shield, Radio, Lock, Zap, Users, TrendingUp, CheckCircle, Smartphone, Laptop, Home as HomeIcon, ShieldCheck, Usb, Cpu, Activity, Award, Menu, X, AlertTriangle } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
+
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-card/95 backdrop-blur-xl border-b border-border/50 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -24,7 +32,6 @@ export default function Home() {
             <a href="#threat" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-105 font-medium">The Threat</a>
             <a href="#solution" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-105 font-medium">Solution</a>
             <a href="#how-it-works" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-105 font-medium">How It Works</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-105 font-medium">Contact</a>
           </div>
           <button 
             className="md:hidden text-foreground hover:text-primary transition-colors"
@@ -54,26 +61,19 @@ export default function Home() {
             >
               Solution
             </a>
-            <a 
-              href="#how-it-works" 
+            <a
+              href="#how-it-works"
               className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               How It Works
-            </a>
-            <a 
-              href="#contact" 
-              className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
             </a>
           </div>
         </div>
       )}
 
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 relative overflow-hidden">
+      <section id="main-content" className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 relative overflow-hidden">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-60"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.08),transparent_60%)]"></div>
@@ -86,7 +86,7 @@ export default function Home() {
             </div>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-semibold mb-4 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-            <span className="text-white hero-title-glow">BlueGuard</span><br />
+            <span className="brand-text-glow">BlueGuard</span><br />
             <span className="bg-gradient-to-r from-primary via-primary to-blue-400 bg-clip-text text-transparent">
               One Vulnerability.<br />
               Billions of Devices.<br />
@@ -311,7 +311,7 @@ export default function Home() {
           {/* BlueGuard Solution */}
           <div className="bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 rounded-2xl p-8 md:p-12 mt-16 text-center">
             <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">BlueGuard: The ONLY Solution for the 4-Second Window</h3>
+            <h3 className="text-3xl font-bold mb-4"><span className="brand-text-glow">BlueGuard</span>: The ONLY Solution for the 4-Second Window</h3>
             <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
               BlueGuard activates at <span className="text-primary font-semibold">0 seconds</span>—intercepting BLE traffic before the OS even starts loading. We protect the critical window that every other security solution misses.
             </p>
@@ -341,7 +341,7 @@ export default function Home() {
               <Award className="w-4 h-4" />
               <span className="text-xs font-medium">PATENT PENDING TECHNOLOGY</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">How BlueGuard Works</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">How <span className="brand-text-glow">BlueGuard</span> Works</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-3">
               Hardware-enforced security that activates before your operating system even loads.
             </p>
@@ -453,7 +453,7 @@ export default function Home() {
       <section id="solution" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Why BlueGuard?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Why <span className="brand-text-glow">BlueGuard</span>?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Hardware-level protection for the most critical vulnerability in modern devices
             </p>
@@ -901,113 +901,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4">Leadership Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Experienced leaders driving innovation in hardware security
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Philip S. Wright - CEO */}
-            <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 group">
-              <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
-                  <span className="text-3xl font-semibold text-primary">PW</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Philip S. Wright</h3>
-                <p className="text-sm text-primary mb-4 font-semibold">Founder & CEO</p>
-                <div className="space-y-2 text-sm text-muted-foreground mb-6">
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Mail className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="mailto:pwright@bluetoothdefense.com" className="hover:underline">pwright@bluetoothdefense.com</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Phone className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="tel:+15103816988" className="hover:underline">+1 (510) 381-6988</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Linkedin className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="https://linkedin.com/in/philipswright" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Steven Blatt - CIO */}
-            <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200 group">
-              <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
-                  <span className="text-3xl font-semibold text-primary">SB</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Steven Blatt</h3>
-                <p className="text-sm text-primary mb-4 font-semibold">Chief Information Officer</p>
-                <div className="space-y-2 text-sm text-muted-foreground mb-6">
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Mail className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="mailto:sblatt@bluetoothdefense.com" className="hover:underline">sblatt@bluetoothdefense.com</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Phone className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="tel:+15103816988" className="hover:underline">+1 (510) 381-6988</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Linkedin className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="https://linkedin.com/in/stevenblatt" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Lesli Mayorga - CFO */}
-            <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 group">
-              <CardContent className="pt-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-primary/30 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500">
-                  <span className="text-3xl font-semibold text-primary">LM</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">Lesli Mayorga</h3>
-                <p className="text-sm text-primary mb-4 font-semibold">Chief Financial Officer</p>
-                <div className="space-y-2 text-sm text-muted-foreground mb-6">
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Mail className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="mailto:lmayorga@bluetoothdefense.com" className="hover:underline">lmayorga@bluetoothdefense.com</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Phone className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="tel:+15103816988" className="hover:underline">+1 (510) 381-6988</a>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 hover:text-primary transition-colors duration-300 group/item">
-                    <Linkedin className="w-4 h-4 group-hover/item:scale-110 transition-transform duration-300" />
-                    <a href="https://linkedin.com/in/leslimayorga" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 text-center animate-in fade-in duration-700 delay-400">
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Interested in learning more about BlueGuard or discussing investment opportunities?
-            </p>
-            <a href="mailto:pwright@bluetoothdefense.com?subject=Meeting Request - BlueGuard&body=Hello Philip,%0D%0A%0D%0AI'm interested in learning more about BlueGuard and would like to schedule a meeting.%0D%0A%0D%0AThank you.">
-              <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
-                Schedule a Meeting
-                <span className="ml-2">→</span>
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 px-6 bg-card/30 border-t border-border/50">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4 group">
             <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-2xl font-semibold text-primary">BlueGuard</span>
+            <span className="text-2xl font-semibold brand-text-glow">BlueGuard</span>
             <span className="ml-3 text-xs bg-primary/20 text-primary px-2 py-1 rounded border border-primary/30">PATENT PENDING</span>
           </div>
           <p className="text-sm text-muted-foreground mb-4">
