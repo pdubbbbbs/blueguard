@@ -98,7 +98,7 @@ export default function Home() {
           </p>
           <div className="max-w-4xl mx-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-250">
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold brand-text-glow leading-relaxed">
-              In plain terms: a pre-boot Bluetooth firewall that closes the global BLE security blind spot from the moment a device powers on.
+              In plain terms: a USB dongle compatible with every Bluetooth-enabled device worldwide—closing the global BLE security blind spot from the moment power flows.
             </p>
           </div>
           <div className="flex items-center justify-center gap-2 mb-8 animate-in fade-in duration-700 delay-300">
