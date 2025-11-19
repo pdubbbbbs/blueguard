@@ -92,13 +92,15 @@ export default function Home() {
               One Solution.
             </span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-3 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-            The first hardware-level security solution addressing a universal vulnerability 
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+            The first hardware-level security solution addressing a universal vulnerability
             affecting every Bluetooth-enabled device currently manufactured.
           </p>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-250">
-            In plain terms: a pre-boot Bluetooth firewall that closes the global BLE security blind spot from the moment a device powers on.
-          </p>
+          <div className="max-w-4xl mx-auto mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-250">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold brand-text-glow leading-relaxed">
+              In plain terms: a pre-boot Bluetooth firewall that closes the global BLE security blind spot from the moment a device powers on.
+            </p>
+          </div>
           <div className="flex items-center justify-center gap-2 mb-8 animate-in fade-in duration-700 delay-300">
             <Award className="w-5 h-5 text-primary" />
             <span className="text-sm text-muted-foreground">Three U.S. Provisional Patents Pending</span>
@@ -120,151 +122,193 @@ export default function Home() {
       </section>
 
       {/* What is BlueGuard - Product Clarity Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-primary/10 via-card/50 to-transparent border-y border-primary/20">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6 border border-primary/30">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-gradient-to-b from-primary/10 via-card/50 to-transparent border-y border-primary/20 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none"></div>
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-8 border border-primary/30 shadow-lg">
               <ShieldCheck className="w-5 h-5" />
-              <span className="text-sm font-semibold">WHAT IS BLUEGUARD?</span>
+              <span className="text-sm font-semibold tracking-wide">THE SOLUTION</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              A USB Security Dongle + Mobile App That Protects Every Bluetooth Device
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-10 leading-tight">
+              Hardware That Sees Everything.<br />
+              <span className="bg-gradient-to-r from-primary via-primary to-blue-400 bg-clip-text text-transparent">Software That Stops Anything.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
-              BlueGuard is a plug-and-play USB hardware device paired with a companion mobile app that gives you complete control over <span className="text-primary font-semibold">all Bluetooth broadcasts, pairing requests, and connections</span> across every device in your network.
+            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+              Plug-and-play USB hardware paired with a mobile command center—giving you <span className="text-primary font-semibold">total visibility and instant control</span> over every Bluetooth signal in your environment.
             </p>
-            <div className="bg-primary/10 border-2 border-primary/30 rounded-xl p-6 max-w-5xl mx-auto">
-              <p className="text-lg font-semibold text-foreground mb-3 text-center">
-                Works with ANY Device That Has Bluetooth + a USB Port
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Laptops & Desktops</span>
+
+            {/* Compatibility showcase with enhanced design */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+              <div className="relative bg-gradient-to-br from-card/90 via-card/80 to-card/90 backdrop-blur-md border-2 border-primary/40 rounded-3xl p-10 md:p-12 max-w-5xl mx-auto shadow-2xl group-hover:border-primary/60 transition-all duration-500">
+                <div className="flex items-center justify-center gap-3 mb-8">
+                  <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50"></div>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground text-center">
+                    Universal. Vendor-Agnostic. Plug-and-Play.
+                  </p>
+                  <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50"></div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Smartphones & Tablets</span>
+                <p className="text-lg md:text-xl text-muted-foreground mb-10 text-center max-w-3xl mx-auto leading-relaxed">
+                  Works with <span className="text-primary font-semibold">any device</span> that has Bluetooth and a USB port. No firmware changes. No software installation. Just plug in and protect.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6 text-base text-muted-foreground">
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Consumer Devices</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Smart TVs</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Enterprise Servers</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Medical Equipment</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">IoT Networks</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Industrial Systems</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Vehicle Systems</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:bg-primary/10 group/item transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300" />
+                    <span className="font-medium">Smart Buildings</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Smart TVs & Streaming Boxes</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Gaming Consoles</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Smart Home Hubs</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>IoT Devices & Sensors</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Network Routers</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Servers & Workstations</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Medical Devices</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Industrial Equipment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Vehicles & Infotainment</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                  <span>Security Cameras & DVRs</span>
+                <div className="mt-10 pt-8 border-t border-primary/20">
+                  <p className="text-lg md:text-xl text-center leading-relaxed">
+                    <span className="text-primary font-bold text-xl md:text-2xl">15+ billion vulnerable devices worldwide.</span><br />
+                    <span className="text-muted-foreground">One universal solution.</span>
+                  </p>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                <span className="text-primary font-semibold">If it has Bluetooth and a USB port, BlueGuard protects it.</span> From your phone charging via USB-C to enterprise servers with USB-A ports—every Bluetooth-enabled device with a USB interface needs this protection.
-              </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* USB Dongle */}
-            <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center border-2 border-primary/40">
-                  <Usb className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-2 gap-10 md:gap-12 mb-20 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-200">
+            {/* Hardware Layer */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-gradient-to-br from-card/95 to-card/85 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-10 md:p-12 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="flex items-center gap-5 mb-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/40 to-primary/20 rounded-2xl flex items-center justify-center border-2 border-primary/50 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                    <Usb className="w-10 h-10 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">The Hardware</h3>
+                    <p className="text-base md:text-lg text-primary font-semibold">Zero-Day Protection Layer</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground">The USB Dongle</h3>
-                  <p className="text-sm text-primary">Hardware Protection Layer</p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Pre-Boot Activation</p>
+                      <p className="text-muted-foreground leading-relaxed">Powers on before your OS—protection starts the instant electricity flows</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Unbypassable Hardware Filter</p>
+                      <p className="text-muted-foreground leading-relaxed">Physical layer security that malware and rootkits can't touch</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">True Plug-and-Play</p>
+                      <p className="text-muted-foreground leading-relaxed">No drivers, no firmware mods, no integration work—just instant protection</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Plugs into any USB port on laptops, desktops, or routers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Activates at boot—before your operating system even loads</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Monitors and filters every Bluetooth connection attempt</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Blocks unauthorized pairing requests at the hardware level</span>
-                </li>
-              </ul>
             </div>
 
-            {/* Companion App */}
-            <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center border-2 border-primary/40">
-                  <Smartphone className="w-8 h-8 text-primary" />
+            {/* Software Layer */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative bg-gradient-to-br from-card/95 to-card/85 backdrop-blur-sm border-2 border-primary/30 rounded-3xl p-10 md:p-12 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="flex items-center gap-5 mb-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/40 to-primary/20 rounded-2xl flex items-center justify-center border-2 border-primary/50 shadow-xl group-hover:scale-110 transition-transform duration-500">
+                    <Smartphone className="w-10 h-10 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">The Software</h3>
+                    <p className="text-base md:text-lg text-primary font-semibold">Command & Control Center</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground">The Companion App</h3>
-                  <p className="text-sm text-primary">Full Control Dashboard</p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Total Network Visibility</p>
+                      <p className="text-muted-foreground leading-relaxed">See every Bluetooth broadcast and pairing attempt across all devices</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Instant Threat Response</p>
+                      <p className="text-muted-foreground leading-relaxed">Approve or block any connection with a single tap—in real time</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 w-8 h-8 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0 group-hover/item:bg-primary/20 group-hover/item:scale-110 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">Intelligent Automation</p>
+                      <p className="text-muted-foreground leading-relaxed">Trust lists and policies that learn from your decisions</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">View all Bluetooth devices attempting to connect in real-time</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Approve or deny pairing requests with one tap</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Create allowlists and blocklists for trusted/untrusted devices</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Monitor entire BLE network across all your Bluetooth devices</span>
-                </li>
-              </ul>
             </div>
           </div>
 
-          {/* Key Value Proposition */}
-          <div className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-2 border-primary/40 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Complete Bluetooth Network Visibility & Control
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              For the first time ever, you can see and control <span className="text-primary font-semibold">every single Bluetooth device and BLE network connection</span> across your entire environment—from phones and laptops to smart home devices and wearables—all from one simple app.
-            </p>
+          {/* Key Value Proposition - Enhanced */}
+          <div className="relative group animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/40 to-primary/30 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+            <div className="relative bg-gradient-to-br from-primary/15 via-primary/10 to-primary/15 border-2 border-primary/50 rounded-3xl p-12 md:p-16 text-center shadow-2xl group-hover:border-primary/70 transition-all duration-500">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
+                  The First—and Only—Solution with<br />
+                  <span className="bg-gradient-to-r from-primary via-primary to-blue-400 bg-clip-text text-transparent">Complete Bluetooth Sovereignty</span>
+                </h3>
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-6">
+                  For the first time in history, you control <span className="text-primary font-bold">every single Bluetooth signal</span> in your environment.
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  Not just laptops. Not just phones. <span className="text-foreground font-semibold">Every Bluetooth-enabled device.</span><br />
+                  Every pairing request. Every broadcast. Every connection.<br />
+                  <span className="text-primary font-bold">Visible. Controllable. Yours.</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
