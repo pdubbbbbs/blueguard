@@ -194,10 +194,10 @@ export default function Patents() {
               <span className="brand-text-glow">BlueGuard</span> Patent Portfolio
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed">
-              Three U.S. Provisional Patent Applications Protecting Our Innovative Bluetooth Security Technology
+              Comprehensive Patent Documentation for Our Innovative Bluetooth Security Technology
             </p>
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Explore our complete patent documentation covering hardware devices, software methods, and enterprise systems
+              Complete technical specifications and filing documentation organized by technology category
             </p>
           </div>
 
@@ -362,16 +362,24 @@ export default function Patents() {
       {/* Call to Action */}
       <section className="py-16 px-6 bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 border-y border-primary/20">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-foreground mb-4">Questions About Our Patents?</h2>
+          <h2 className="text-3xl font-semibold text-foreground mb-4">Patent Portfolio Documentation</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            For licensing inquiries, technical questions, or investor briefings about our patent portfolio, please get in touch.
+            This portfolio includes complete technical specifications, USPTO filing receipts, and application documentation for three distinct patent filings covering hardware, software, and enterprise system innovations in Bluetooth security.
           </p>
-          <a href="/#contact">
-            <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
-              Contact Us
-              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-          </a>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-sm">
+            <div className="bg-card/50 rounded-lg p-4 border border-border">
+              <h3 className="font-semibold text-foreground mb-2">Hardware Innovation</h3>
+              <p className="text-muted-foreground">USB-based security device providing pre-boot Bluetooth protection</p>
+            </div>
+            <div className="bg-card/50 rounded-lg p-4 border border-border">
+              <h3 className="font-semibold text-foreground mb-2">Software Methods</h3>
+              <p className="text-muted-foreground">Automated attack surface reduction and threat detection algorithms</p>
+            </div>
+            <div className="bg-card/50 rounded-lg p-4 border border-border">
+              <h3 className="font-semibold text-foreground mb-2">Enterprise Platform</h3>
+              <p className="text-muted-foreground">Centralized management system for fleet-wide security deployment</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -387,7 +395,7 @@ export default function Patents() {
             Hardware-Level Bluetooth Security for Every Device
           </p>
           <p className="text-xs text-muted-foreground">
-            © 2025 BlueGuard. All rights reserved. | Three U.S. Provisional Patents Pending
+            © 2025 BlueGuard LLC. All rights reserved. | Patent Applications Filed with USPTO
           </p>
         </div>
       </footer>
